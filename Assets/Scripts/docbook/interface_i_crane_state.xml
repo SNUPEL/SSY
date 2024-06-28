@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interface_i_crane_state" xml:lang="ko">
+<title>ICraneState 인터페이스 참조</title>
+<indexterm><primary>ICraneState</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_interface_i_crane_state_1ae31daa393a096fcef8decd4010d522cc">Handle</link> (<link linkend="_class_crane_controller2">CraneController2</link> controller)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_interface_i_crane_state_1ae31daa393a096fcef8decd4010d522cc"/><section>
+    <title>Handle()</title>
+<indexterm><primary>Handle</primary><secondary>ICraneState</secondary></indexterm>
+<indexterm><primary>ICraneState</primary><secondary>Handle</secondary></indexterm>
+<para><computeroutput>void ICraneState.Handle (<link linkend="_class_crane_controller2">CraneController2</link> controller)</computeroutput></para><para>
+<link linkend="_class_crane_start_state_1a51f385f7f01f5b10ea163b41742e9569">CraneStartState</link>, <link linkend="_class_crane_stop_state_1a6dcc9b75fd4560be9caced60af998038">CraneStopState</link>, <link linkend="_class_crane_turn_state_1a711381b7cd5e61b2216bc6792b0683ed">CraneTurnState</link>에서 구현되었습니다.</para>
+</section>
+<para>
+이 인터페이스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__i_crane_state_8cs">ICraneState.cs</link></section>
+</section>

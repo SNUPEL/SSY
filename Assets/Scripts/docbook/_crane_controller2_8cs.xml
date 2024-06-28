@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__crane_controller2_8cs" xml:lang="ko">
+<title>CraneController2.cs 파일 참조</title>
+<indexterm><primary>CraneController2.cs</primary></indexterm>
+<simplesect>
+    <title>클래스    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_crane_controller2">CraneController2</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

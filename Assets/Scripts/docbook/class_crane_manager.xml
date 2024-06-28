@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_crane_manager" xml:lang="ko">
+<title>CraneManager 클래스 참조</title>
+<indexterm><primary>CraneManager</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_crane_controller">CraneController</link> <link linkend="_class_crane_manager_1a9770d8d378e59a7bc7b47f6d37c83deb">GetCrane</link> (string crane)</para>
+
+<para>크레인 객체를 반환한다. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_manager_1a0a626b790eb2e0ba2d20a012add55640">InitializeCrane</link> ()</para>
+
+<para>크레인을 초기화한다. 본 강재적치장에서는 두 개의 크레인만 존재하기 때문에 동적이 아닌 하드코드로 구현한다. 반드시 StockLayout이 먼저 초기화되어야 함 </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_manager_1a8465d133919ed529c4a5913b2b869de0">Move</link> (float spent, float delta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>정적 Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_crane_manager">CraneManager</link> <link linkend="_class_crane_manager_1a9cbbec10f0d606b5fa5eb6cbe18a5120">GetInstance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public 속성    </title>
+        <itemizedlist>
+            <listitem><para>GameObject <link linkend="_class_crane_manager_1a4182de453bfbaf658e096f554decfb1c">mPrefabOverheadCrane</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>속성    </title>
+        <itemizedlist>
+            <listitem><para>List&lt; GameObject &gt; <link linkend="_class_crane_manager_1a45bc9221391febd85b5f9841155207e6">Cranes</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_crane_manager_1a9770d8d378e59a7bc7b47f6d37c83deb"/><section>
+    <title>GetCrane()</title>
+<indexterm><primary>GetCrane</primary><secondary>CraneManager</secondary></indexterm>
+<indexterm><primary>CraneManager</primary><secondary>GetCrane</secondary></indexterm>
+<para><computeroutput><link linkend="_class_crane_controller">CraneController</link> CraneManager.GetCrane (string crane)</computeroutput></para><para>
+
+<para>크레인 객체를 반환한다. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+매개변수</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>crane</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>반환값</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_crane_manager_1a9cbbec10f0d606b5fa5eb6cbe18a5120"/><section>
+    <title>GetInstance()</title>
+<indexterm><primary>GetInstance</primary><secondary>CraneManager</secondary></indexterm>
+<indexterm><primary>CraneManager</primary><secondary>GetInstance</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_crane_manager">CraneManager</link> CraneManager.GetInstance ( )<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_crane_manager_1a0a626b790eb2e0ba2d20a012add55640"/><section>
+    <title>InitializeCrane()</title>
+<indexterm><primary>InitializeCrane</primary><secondary>CraneManager</secondary></indexterm>
+<indexterm><primary>CraneManager</primary><secondary>InitializeCrane</secondary></indexterm>
+<para><computeroutput>void CraneManager.InitializeCrane ( )</computeroutput></para><para>
+
+<para>크레인을 초기화한다. 본 강재적치장에서는 두 개의 크레인만 존재하기 때문에 동적이 아닌 하드코드로 구현한다. 반드시 StockLayout이 먼저 초기화되어야 함 </para>
+</para>
+</section>
+<anchor xml:id="_class_crane_manager_1a8465d133919ed529c4a5913b2b869de0"/><section>
+    <title>Move()</title>
+<indexterm><primary>Move</primary><secondary>CraneManager</secondary></indexterm>
+<indexterm><primary>CraneManager</primary><secondary>Move</secondary></indexterm>
+<para><computeroutput>void CraneManager.Move (float spent, float delta)</computeroutput></para></section>
+</section>
+<section>
+<title>멤버 데이터 문서화</title>
+<anchor xml:id="_class_crane_manager_1a4182de453bfbaf658e096f554decfb1c"/><section>
+    <title>mPrefabOverheadCrane</title>
+<indexterm><primary>mPrefabOverheadCrane</primary><secondary>CraneManager</secondary></indexterm>
+<indexterm><primary>CraneManager</primary><secondary>mPrefabOverheadCrane</secondary></indexterm>
+<para><computeroutput>GameObject CraneManager.mPrefabOverheadCrane</computeroutput></para></section>
+</section>
+<section>
+<title>속성 문서화</title>
+<anchor xml:id="_class_crane_manager_1a45bc9221391febd85b5f9841155207e6"/><section>
+    <title>Cranes</title>
+<indexterm><primary>Cranes</primary><secondary>CraneManager</secondary></indexterm>
+<indexterm><primary>CraneManager</primary><secondary>Cranes</secondary></indexterm>
+<para><computeroutput>List&lt;GameObject&gt; CraneManager.Cranes<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para></section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__crane_manager_8cs">CraneManager.cs</link></section>
+</section>

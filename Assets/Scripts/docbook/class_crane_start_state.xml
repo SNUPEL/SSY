@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_crane_start_state" xml:lang="ko">
+<title>CraneStartState 클래스 참조</title>
+<indexterm><primary>CraneStartState</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_crane_start_state_1a51f385f7f01f5b10ea163b41742e9569">Handle</link> (<link linkend="_class_crane_controller2">CraneController2</link> craneController)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_crane_start_state_1a51f385f7f01f5b10ea163b41742e9569"/><section>
+    <title>Handle()</title>
+<indexterm><primary>Handle</primary><secondary>CraneStartState</secondary></indexterm>
+<indexterm><primary>CraneStartState</primary><secondary>Handle</secondary></indexterm>
+<para><computeroutput>void CraneStartState.Handle (<link linkend="_class_crane_controller2">CraneController2</link> craneController)</computeroutput></para><para>
+<link linkend="_interface_i_crane_state_1ae31daa393a096fcef8decd4010d522cc">ICraneState</link>를 구현.</para>
+</section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__crane_start_state_8cs">CraneStartState.cs</link></section>
+</section>

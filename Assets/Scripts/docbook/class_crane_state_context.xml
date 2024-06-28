@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_crane_state_context" xml:lang="ko">
+<title>CraneStateContext 클래스 참조</title>
+<indexterm><primary>CraneStateContext</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_crane_state_context_1aed29c65aaadcf3ff4e6a3cb9f8e88bf2">CraneStateContext</link> (<link linkend="_class_crane_controller2">CraneController2</link> craneController)</para>
+
+<para>크레인의 현재 상태를 가리키는 public 속성을 노출하여 모든 상태 변경을 인식한다. 개체 속성을 통해 현재 상태를 업데이트하고 <link linkend="_class_crane_state_context_1ac9d8f5c32846cf08594fc28054df4b84">Transition()</link> 함수를 호출하여 업데이트한 상태로 전환할 수 있다. 예를 들면 각 상태 클래스가 다음 상태 클래스를 선언해서 상태를 함께 연결해 체인을 만드는 경우에 유용한 메커니즘이다. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_state_context_1ac9d8f5c32846cf08594fc28054df4b84">Transition</link> ()</para>
+
+<para>다음으로 Context 오브젝트의 <link linkend="_class_crane_state_context_1ac9d8f5c32846cf08594fc28054df4b84">Transition()</link> 함수를 호출하여 연결된 상태를 순환할 수 있다. 반드시 필요한 방식은 아니므로 오버로드한 <link linkend="_class_crane_state_context_1ac9d8f5c32846cf08594fc28054df4b84">Transition()</link> 함수를 호출하고 전환하고 싶은 상태를 전달할 것이다. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_state_context_1a68ddfb35bfe63333ebc48394a7d85191">Transition</link> (<link linkend="_interface_i_crane_state">ICraneState</link> state)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>속성    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_interface_i_crane_state">ICraneState</link> <link linkend="_class_crane_state_context_1afdb25cfeb503f11261c5d9ab73a527f5">CurrentState</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>생성자 &amp; 소멸자 문서화</title>
+<anchor xml:id="_class_crane_state_context_1aed29c65aaadcf3ff4e6a3cb9f8e88bf2"/><section>
+    <title>CraneStateContext()</title>
+<indexterm><primary>CraneStateContext</primary><secondary>CraneStateContext</secondary></indexterm>
+<indexterm><primary>CraneStateContext</primary><secondary>CraneStateContext</secondary></indexterm>
+<para><computeroutput>CraneStateContext.CraneStateContext (<link linkend="_class_crane_controller2">CraneController2</link> craneController)</computeroutput></para><para>
+
+<para>크레인의 현재 상태를 가리키는 public 속성을 노출하여 모든 상태 변경을 인식한다. 개체 속성을 통해 현재 상태를 업데이트하고 <link linkend="_class_crane_state_context_1ac9d8f5c32846cf08594fc28054df4b84">Transition()</link> 함수를 호출하여 업데이트한 상태로 전환할 수 있다. 예를 들면 각 상태 클래스가 다음 상태 클래스를 선언해서 상태를 함께 연결해 체인을 만드는 경우에 유용한 메커니즘이다. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+매개변수</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>craneController</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_crane_state_context_1ac9d8f5c32846cf08594fc28054df4b84"/><section>
+    <title>Transition()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Transition</primary><secondary>CraneStateContext</secondary></indexterm>
+<indexterm><primary>CraneStateContext</primary><secondary>Transition</secondary></indexterm>
+<para><computeroutput>void CraneStateContext.Transition ( )</computeroutput></para><para>
+
+<para>다음으로 Context 오브젝트의 <link linkend="_class_crane_state_context_1ac9d8f5c32846cf08594fc28054df4b84">Transition()</link> 함수를 호출하여 연결된 상태를 순환할 수 있다. 반드시 필요한 방식은 아니므로 오버로드한 <link linkend="_class_crane_state_context_1ac9d8f5c32846cf08594fc28054df4b84">Transition()</link> 함수를 호출하고 전환하고 싶은 상태를 전달할 것이다. </para>
+</para>
+</section>
+<anchor xml:id="_class_crane_state_context_1a68ddfb35bfe63333ebc48394a7d85191"/><section>
+    <title>Transition()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Transition</primary><secondary>CraneStateContext</secondary></indexterm>
+<indexterm><primary>CraneStateContext</primary><secondary>Transition</secondary></indexterm>
+<para><computeroutput>void CraneStateContext.Transition (<link linkend="_interface_i_crane_state">ICraneState</link> state)</computeroutput></para></section>
+</section>
+<section>
+<title>속성 문서화</title>
+<anchor xml:id="_class_crane_state_context_1afdb25cfeb503f11261c5d9ab73a527f5"/><section>
+    <title>CurrentState</title>
+<indexterm><primary>CurrentState</primary><secondary>CraneStateContext</secondary></indexterm>
+<indexterm><primary>CraneStateContext</primary><secondary>CurrentState</secondary></indexterm>
+<para><computeroutput><link linkend="_interface_i_crane_state">ICraneState</link> CraneStateContext.CurrentState<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para></section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__crane_state_context_8cs">CraneStateContext.cs</link></section>
+</section>

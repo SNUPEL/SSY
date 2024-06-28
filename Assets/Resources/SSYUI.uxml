@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement style="flex-grow: 1; width: 60%;" />
+        <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="labelLog" style="justify-content: flex-start; align-items: flex-start; align-self: auto; flex-wrap: wrap; -unity-text-align: upper-left; color: rgb(255, 0, 0); -unity-font-style: bold;" />
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1;" />
+</ui:UXML>

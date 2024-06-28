@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_stock_layout" xml:lang="ko">
+<title>StockLayout 클래스 참조</title>
+<indexterm><primary>StockLayout</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_stock_layout_1a42ad8c577b676a64cee6bd9695ab796b">InitializeLayout</link> ()</para>
+
+<para>조선소 작업장의 레이아웃을 초기화한다. 각 파일 객체를 초기화(위치 선정, 이름 결정) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stock_layout_1a04a6cc7260aef84df89e0b6ff1f08ea8">PutDown</link> (string pileNo, string steel)</para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_stock_layout_1af94d5710112d194e83fc226d2db2f2ed">getPileLocation</link> (string pileNo)</para>
+
+<para>적치장 파일의 위치를 반환한다. </para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_stock_layout_1acad0b17511e5cb266e0a13efbdf32e13">getExectSteelLocation</link> (string pileNo)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_stock_layout_1a77136ea195df3e409c3ae86ff45b6641">GetPileHeight</link> (string pileNo)</para>
+
+<para>파일의 적치된 강재 총 높이를 구하여 새로운 강재를 놓을 경우 높이를 반환한다. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stock_layout_1a97aafd96b96721a2ae4192cb9178bcf9">RemoveSteel</link> (string pileNo, GameObject mSteel)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stock_layout_1ad40c51cc87b00d35ef5531facc766ef1">AddSteel</link> (string pileNo, GameObject mSteel)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>정적 Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_stock_layout">StockLayout</link> <link linkend="_class_stock_layout_1a542f50daf7e203cf178296df654973e4">GetInstance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public 속성    </title>
+        <itemizedlist>
+            <listitem><para>GameObject <link linkend="_class_stock_layout_1a671dd3714fadb23ceee3d75c6c1e563c">mPoint</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>속성    </title>
+        <itemizedlist>
+            <listitem><para>Dictionary&lt; string, GameObject &gt; <link linkend="_class_stock_layout_1a4bd6161d2a591331deb96aa4e62deda9">Piles</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_stock_layout_1ad40c51cc87b00d35ef5531facc766ef1"/><section>
+    <title>AddSteel()</title>
+<indexterm><primary>AddSteel</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>AddSteel</secondary></indexterm>
+<para><computeroutput>void StockLayout.AddSteel (string pileNo, GameObject mSteel)</computeroutput></para></section>
+<anchor xml:id="_class_stock_layout_1acad0b17511e5cb266e0a13efbdf32e13"/><section>
+    <title>getExectSteelLocation()</title>
+<indexterm><primary>getExectSteelLocation</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>getExectSteelLocation</secondary></indexterm>
+<para><computeroutput>Vector3 StockLayout.getExectSteelLocation (string pileNo)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+매개변수</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pileNo</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>반환값</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_stock_layout_1a542f50daf7e203cf178296df654973e4"/><section>
+    <title>GetInstance()</title>
+<indexterm><primary>GetInstance</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>GetInstance</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_stock_layout">StockLayout</link> StockLayout.GetInstance ( )<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_stock_layout_1a77136ea195df3e409c3ae86ff45b6641"/><section>
+    <title>GetPileHeight()</title>
+<indexterm><primary>GetPileHeight</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>GetPileHeight</secondary></indexterm>
+<para><computeroutput>float StockLayout.GetPileHeight (string pileNo)</computeroutput></para><para>
+
+<para>파일의 적치된 강재 총 높이를 구하여 새로운 강재를 놓을 경우 높이를 반환한다. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+매개변수</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pileNo</entry><entry>
+<para>적치할 파일의 넘버</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>반환값</title>
+
+<para>파일의 쌓여진 높이</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_stock_layout_1af94d5710112d194e83fc226d2db2f2ed"/><section>
+    <title>getPileLocation()</title>
+<indexterm><primary>getPileLocation</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>getPileLocation</secondary></indexterm>
+<para><computeroutput>Vector3 StockLayout.getPileLocation (string pileNo)</computeroutput></para><para>
+
+<para>적치장 파일의 위치를 반환한다. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+매개변수</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pileNo</entry><entry>
+<para>파일 번호</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>반환값</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_stock_layout_1a42ad8c577b676a64cee6bd9695ab796b"/><section>
+    <title>InitializeLayout()</title>
+<indexterm><primary>InitializeLayout</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>InitializeLayout</secondary></indexterm>
+<para><computeroutput>void StockLayout.InitializeLayout ( )</computeroutput></para><para>
+
+<para>조선소 작업장의 레이아웃을 초기화한다. 각 파일 객체를 초기화(위치 선정, 이름 결정) </para>
+</para>
+</section>
+<anchor xml:id="_class_stock_layout_1a04a6cc7260aef84df89e0b6ff1f08ea8"/><section>
+    <title>PutDown()</title>
+<indexterm><primary>PutDown</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>PutDown</secondary></indexterm>
+<para><computeroutput>void StockLayout.PutDown (string pileNo, string steel)</computeroutput></para></section>
+<anchor xml:id="_class_stock_layout_1a97aafd96b96721a2ae4192cb9178bcf9"/><section>
+    <title>RemoveSteel()</title>
+<indexterm><primary>RemoveSteel</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>RemoveSteel</secondary></indexterm>
+<para><computeroutput>void StockLayout.RemoveSteel (string pileNo, GameObject mSteel)</computeroutput></para></section>
+</section>
+<section>
+<title>멤버 데이터 문서화</title>
+<anchor xml:id="_class_stock_layout_1a671dd3714fadb23ceee3d75c6c1e563c"/><section>
+    <title>mPoint</title>
+<indexterm><primary>mPoint</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>mPoint</secondary></indexterm>
+<para><computeroutput>GameObject StockLayout.mPoint</computeroutput></para></section>
+</section>
+<section>
+<title>속성 문서화</title>
+<anchor xml:id="_class_stock_layout_1a4bd6161d2a591331deb96aa4e62deda9"/><section>
+    <title>Piles</title>
+<indexterm><primary>Piles</primary><secondary>StockLayout</secondary></indexterm>
+<indexterm><primary>StockLayout</primary><secondary>Piles</secondary></indexterm>
+<para><computeroutput>Dictionary&lt;string, GameObject&gt; StockLayout.Piles<computeroutput>[get]</computeroutput></computeroutput></para></section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__stock_layout_8cs">StockLayout.cs</link></section>
+</section>

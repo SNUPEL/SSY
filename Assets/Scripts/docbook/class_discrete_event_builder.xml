@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_discrete_event_builder" xml:lang="ko">
+<title>DiscreteEventBuilder 클래스 참조</title>
+<indexterm><primary>DiscreteEventBuilder</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> <link linkend="_class_discrete_event_builder_1a9c14e2182015a47d173fda62f39c0663">setTimestamp</link> (string timestamp)</para>
+</listitem>
+            <listitem><para><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> <link linkend="_class_discrete_event_builder_1aec2ac9be8cdd3b0a1e064f9b4c98ab50">setMode</link> (string mode)</para>
+</listitem>
+            <listitem><para><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> <link linkend="_class_discrete_event_builder_1a968f96b7513f8e4cd5989545a5fc66ed">setCrane</link> (string crane)</para>
+</listitem>
+            <listitem><para><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> <link linkend="_class_discrete_event_builder_1aeebb81e6f985df4c6940e0de5c18ad8d">setLocation</link> (string location)</para>
+</listitem>
+            <listitem><para><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> <link linkend="_class_discrete_event_builder_1aac531a03169f0042df59b33b6b324819">setPlate</link> (string plate)</para>
+</listitem>
+            <listitem><para><link linkend="_class_discrete_event">DiscreteEvent</link> <link linkend="_class_discrete_event_builder_1a9f59e4f8a2085a8a3232e6c752a65521">Build</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_discrete_event_builder_1a9f59e4f8a2085a8a3232e6c752a65521"/><section>
+    <title>Build()</title>
+<indexterm><primary>Build</primary><secondary>DiscreteEventBuilder</secondary></indexterm>
+<indexterm><primary>DiscreteEventBuilder</primary><secondary>Build</secondary></indexterm>
+<para><computeroutput><link linkend="_class_discrete_event">DiscreteEvent</link> DiscreteEventBuilder.Build ( )</computeroutput></para></section>
+<anchor xml:id="_class_discrete_event_builder_1a968f96b7513f8e4cd5989545a5fc66ed"/><section>
+    <title>setCrane()</title>
+<indexterm><primary>setCrane</primary><secondary>DiscreteEventBuilder</secondary></indexterm>
+<indexterm><primary>DiscreteEventBuilder</primary><secondary>setCrane</secondary></indexterm>
+<para><computeroutput><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> DiscreteEventBuilder.setCrane (string crane)</computeroutput></para></section>
+<anchor xml:id="_class_discrete_event_builder_1aeebb81e6f985df4c6940e0de5c18ad8d"/><section>
+    <title>setLocation()</title>
+<indexterm><primary>setLocation</primary><secondary>DiscreteEventBuilder</secondary></indexterm>
+<indexterm><primary>DiscreteEventBuilder</primary><secondary>setLocation</secondary></indexterm>
+<para><computeroutput><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> DiscreteEventBuilder.setLocation (string location)</computeroutput></para></section>
+<anchor xml:id="_class_discrete_event_builder_1aec2ac9be8cdd3b0a1e064f9b4c98ab50"/><section>
+    <title>setMode()</title>
+<indexterm><primary>setMode</primary><secondary>DiscreteEventBuilder</secondary></indexterm>
+<indexterm><primary>DiscreteEventBuilder</primary><secondary>setMode</secondary></indexterm>
+<para><computeroutput><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> DiscreteEventBuilder.setMode (string mode)</computeroutput></para></section>
+<anchor xml:id="_class_discrete_event_builder_1aac531a03169f0042df59b33b6b324819"/><section>
+    <title>setPlate()</title>
+<indexterm><primary>setPlate</primary><secondary>DiscreteEventBuilder</secondary></indexterm>
+<indexterm><primary>DiscreteEventBuilder</primary><secondary>setPlate</secondary></indexterm>
+<para><computeroutput><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> DiscreteEventBuilder.setPlate (string plate)</computeroutput></para></section>
+<anchor xml:id="_class_discrete_event_builder_1a9c14e2182015a47d173fda62f39c0663"/><section>
+    <title>setTimestamp()</title>
+<indexterm><primary>setTimestamp</primary><secondary>DiscreteEventBuilder</secondary></indexterm>
+<indexterm><primary>DiscreteEventBuilder</primary><secondary>setTimestamp</secondary></indexterm>
+<para><computeroutput><link linkend="_class_discrete_event_builder">DiscreteEventBuilder</link> DiscreteEventBuilder.setTimestamp (string timestamp)</computeroutput></para></section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__discrete_event_builder_8cs">DiscreteEventBuilder.cs</link></section>
+</section>

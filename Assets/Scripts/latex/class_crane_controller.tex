@@ -1,0 +1,162 @@
+\doxysection{Crane\+Controller 클래스 참조}
+\label{class_crane_controller}\index{CraneController@{CraneController}}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Locate} (string pile\+No)
+\begin{DoxyCompactList}\small\item\em 크레인만의 위치를 조정한다. 크레인의 경우 x 축으로만 움직이므로 pile의 위치값을 받으면 x 값만 바뀐다. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Previous\+Event} (Key\+Value\+Pair$<$ int, \textbf{ Discrete\+Event} $>$ pair)
+\item 
+void \textbf{ Set\+Next\+Event} (Key\+Value\+Pair$<$ int, \textbf{ Discrete\+Event} $>$ pair)
+\item 
+void \textbf{ Search\+Next\+Event} ()
+\begin{DoxyCompactList}\small\item\em 다음 Mode를 탐색하고 넘어간다. \end{DoxyCompactList}\item 
+virtual void \textbf{ move} (float spent, float delta)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \textbf{ offset} = new Vector3(0f, 60f, 2f)
+\item 
+Game\+Object \textbf{ m\+Center}
+\begin{DoxyCompactList}\small\item\em Crane 에셋의 좌표 문제로 센터를 커스텀으로 지정함. \end{DoxyCompactList}\item 
+Game\+Object \textbf{ m\+Hanger}
+\item 
+Game\+Object \textbf{ m\+Upper\+Height\+Limit}
+\item 
+Game\+Object \textbf{ m\+Lower\+Height\+Limit}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{속성}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ Name}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{멤버 함수 문서화}
+\index{CraneController@{CraneController}!Locate@{Locate}}
+\index{Locate@{Locate}!CraneController@{CraneController}}
+\doxysubsubsection{Locate()}
+{\footnotesize\ttfamily \label{class_crane_controller_a68a0480f91e1258d0f6c2157c035fe16} 
+void Crane\+Controller.\+Locate (\begin{DoxyParamCaption}\item[{string}]{pile\+No}{}\end{DoxyParamCaption})}
+
+
+
+크레인만의 위치를 조정한다. 크레인의 경우 x 축으로만 움직이므로 pile의 위치값을 받으면 x 값만 바뀐다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em pile\+No} & 이동할 \doxyref{Pile}{페이지}{class_pile} 이름 \\
+\hline
+\end{DoxyParams}
+\index{CraneController@{CraneController}!move@{move}}
+\index{move@{move}!CraneController@{CraneController}}
+\doxysubsubsection{move()}
+{\footnotesize\ttfamily \label{class_crane_controller_a04a510fbfae5b99368bcfcd7123a4354} 
+virtual void Crane\+Controller.\+move (\begin{DoxyParamCaption}\item[{float}]{spent}{, }\item[{float}]{delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyVerb} @namespace
+ @brief [목록에 보여지는 설명]
+ @note 참고 설명
+ @todo 할 일 설명
+ @pre 미리 호출해야 할 사항
+ @bug 버그 설명
+ @warning 참고 링크, 페이지
+ @see 참고할 함수 또는 페이지
+ * @section table_sec 표 삽입 예시
+\end{DoxyVerb}
+ 표는 다음과 같이 삽입합니다. \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 항목   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 설명    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 항목   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 설명    }\\\cline{1-2}
+\endhead
+IFigure   &도형 인터페이스    \\\cline{1-2}
+Line   &IFigure를 상속받은 Line Class   \\\cline{1-2}
+\end{longtabu}
+
+
+\textbf{ Null\+Crane\+Controller} \doxyref{}{페이지}{class_null_crane_controller_a0c474a098990e0f54ba65fec3cebd20b}에서 재구현되었습니다.
+
+\index{CraneController@{CraneController}!SearchNextEvent@{SearchNextEvent}}
+\index{SearchNextEvent@{SearchNextEvent}!CraneController@{CraneController}}
+\doxysubsubsection{SearchNextEvent()}
+{\footnotesize\ttfamily \label{class_crane_controller_ab792bc4dfa6ec9d344114ecb2e937e0a} 
+void Crane\+Controller.\+Search\+Next\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+다음 Mode를 탐색하고 넘어간다. 
+
+
+\begin{DoxyExceptions}{예외}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\index{CraneController@{CraneController}!SetNextEvent@{SetNextEvent}}
+\index{SetNextEvent@{SetNextEvent}!CraneController@{CraneController}}
+\doxysubsubsection{SetNextEvent()}
+{\footnotesize\ttfamily \label{class_crane_controller_a41972830aadb56743b012604ede46ab5} 
+void Crane\+Controller.\+Set\+Next\+Event (\begin{DoxyParamCaption}\item[{Key\+Value\+Pair$<$ int, \textbf{ Discrete\+Event} $>$}]{pair}{}\end{DoxyParamCaption})}
+
+\index{CraneController@{CraneController}!SetPreviousEvent@{SetPreviousEvent}}
+\index{SetPreviousEvent@{SetPreviousEvent}!CraneController@{CraneController}}
+\doxysubsubsection{SetPreviousEvent()}
+{\footnotesize\ttfamily \label{class_crane_controller_ad1f2233f450e2b75662e64c57a9ad24f} 
+void Crane\+Controller.\+Set\+Previous\+Event (\begin{DoxyParamCaption}\item[{Key\+Value\+Pair$<$ int, \textbf{ Discrete\+Event} $>$}]{pair}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\index{CraneController@{CraneController}!mCenter@{mCenter}}
+\index{mCenter@{mCenter}!CraneController@{CraneController}}
+\doxysubsubsection{mCenter}
+{\footnotesize\ttfamily \label{class_crane_controller_adaec9020914b98acdccf113b15bafa7e} 
+Game\+Object Crane\+Controller.\+m\+Center}
+
+
+
+Crane 에셋의 좌표 문제로 센터를 커스텀으로 지정함. 
+
+\index{CraneController@{CraneController}!mHanger@{mHanger}}
+\index{mHanger@{mHanger}!CraneController@{CraneController}}
+\doxysubsubsection{mHanger}
+{\footnotesize\ttfamily \label{class_crane_controller_a7192a3830e21c0af0be25fc4d2ebd384} 
+Game\+Object Crane\+Controller.\+m\+Hanger}
+
+\index{CraneController@{CraneController}!mLowerHeightLimit@{mLowerHeightLimit}}
+\index{mLowerHeightLimit@{mLowerHeightLimit}!CraneController@{CraneController}}
+\doxysubsubsection{mLowerHeightLimit}
+{\footnotesize\ttfamily \label{class_crane_controller_aec877d1cb92931e377ad84704c721a6f} 
+Game\+Object Crane\+Controller.\+m\+Lower\+Height\+Limit}
+
+\index{CraneController@{CraneController}!mUpperHeightLimit@{mUpperHeightLimit}}
+\index{mUpperHeightLimit@{mUpperHeightLimit}!CraneController@{CraneController}}
+\doxysubsubsection{mUpperHeightLimit}
+{\footnotesize\ttfamily \label{class_crane_controller_ace10d6d6ed7a4647681b8306eb2aba08} 
+Game\+Object Crane\+Controller.\+m\+Upper\+Height\+Limit}
+
+\index{CraneController@{CraneController}!offset@{offset}}
+\index{offset@{offset}!CraneController@{CraneController}}
+\doxysubsubsection{offset}
+{\footnotesize\ttfamily \label{class_crane_controller_aaf96b9bec369ffc3e970627023f981d8} 
+Vector3 Crane\+Controller.\+offset = new Vector3(0f, 60f, 2f)}
+
+
+
+\doxysubsection{속성 문서화}
+\index{CraneController@{CraneController}!Name@{Name}}
+\index{Name@{Name}!CraneController@{CraneController}}
+\doxysubsubsection{Name}
+{\footnotesize\ttfamily \label{class_crane_controller_aa797b081488cca2dce0dd947259f4bb2} 
+string Crane\+Controller.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Crane\+Controller.\+cs}\end{DoxyCompactItemize}

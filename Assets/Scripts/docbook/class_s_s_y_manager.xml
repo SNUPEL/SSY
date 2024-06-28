@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_s_s_y_manager" xml:lang="ko">
+<title>SSYManager 클래스 참조</title>
+<indexterm><primary>SSYManager</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_s_s_y_manager">SSYManager</link> <link linkend="_class_s_s_y_manager_1aebd06fce659201e66776f1aac2e02520">GetInstance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>정적 Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_s_s_y_manager_1ada240a21044e94021ee6287b4f3285a2">Log</link> (string message)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_s_s_y_manager_1aebd06fce659201e66776f1aac2e02520"/><section>
+    <title>GetInstance()</title>
+<indexterm><primary>GetInstance</primary><secondary>SSYManager</secondary></indexterm>
+<indexterm><primary>SSYManager</primary><secondary>GetInstance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_s_s_y_manager">SSYManager</link> SSYManager.GetInstance ( )</computeroutput></para></section>
+<anchor xml:id="_class_s_s_y_manager_1ada240a21044e94021ee6287b4f3285a2"/><section>
+    <title>Log()</title>
+<indexterm><primary>Log</primary><secondary>SSYManager</secondary></indexterm>
+<indexterm><primary>SSYManager</primary><secondary>Log</secondary></indexterm>
+<para><computeroutput>static void SSYManager.Log (string message)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__s_s_y_manager_8cs">SSYManager.cs</link></section>
+</section>

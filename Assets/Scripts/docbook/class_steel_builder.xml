@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_steel_builder" xml:lang="ko">
+<title>SteelBuilder 클래스 참조</title>
+<indexterm><primary>SteelBuilder</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_steel_builder_1ae7798223a91da27ab089bf8844ec22d3">SteelBuilder</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_steel_builder">SteelBuilder</link> <link linkend="_class_steel_builder_1adaf705ec7077066dc845ce0191a52bb8">setPileNo</link> (string number)</para>
+</listitem>
+            <listitem><para><link linkend="_class_steel_builder">SteelBuilder</link> <link linkend="_class_steel_builder_1a50df5bd700a088cc3debf65854e967fc">setPileSequence</link> (string sequence)</para>
+</listitem>
+            <listitem><para><link linkend="_class_steel_builder">SteelBuilder</link> <link linkend="_class_steel_builder_1a526c4497a251a18983890eac4035b3d2">setMarkNo</link> (string id)</para>
+</listitem>
+            <listitem><para><link linkend="_class_steel_builder">SteelBuilder</link> <link linkend="_class_steel_builder_1a4ab85bf7a20fcaedfbdac15ec7841904">setUnitW</link> (string unitW)</para>
+</listitem>
+            <listitem><para><link linkend="_class_steel_builder">SteelBuilder</link> <link linkend="_class_steel_builder_1a3c5e411352fbce8d63c0264f1408fe4c">setToPile</link> (string id)</para>
+</listitem>
+            <listitem><para><link linkend="_class_steel">Steel</link> <link linkend="_class_steel_builder_1a6d11f7c14aec23b251d3dee7903f4530">Build</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>생성자 &amp; 소멸자 문서화</title>
+<anchor xml:id="_class_steel_builder_1ae7798223a91da27ab089bf8844ec22d3"/><section>
+    <title>SteelBuilder()</title>
+<indexterm><primary>SteelBuilder</primary><secondary>SteelBuilder</secondary></indexterm>
+<indexterm><primary>SteelBuilder</primary><secondary>SteelBuilder</secondary></indexterm>
+<para><computeroutput>SteelBuilder.SteelBuilder ( )</computeroutput></para></section>
+</section>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_steel_builder_1a6d11f7c14aec23b251d3dee7903f4530"/><section>
+    <title>Build()</title>
+<indexterm><primary>Build</primary><secondary>SteelBuilder</secondary></indexterm>
+<indexterm><primary>SteelBuilder</primary><secondary>Build</secondary></indexterm>
+<para><computeroutput><link linkend="_class_steel">Steel</link> SteelBuilder.Build ( )</computeroutput></para></section>
+<anchor xml:id="_class_steel_builder_1a526c4497a251a18983890eac4035b3d2"/><section>
+    <title>setMarkNo()</title>
+<indexterm><primary>setMarkNo</primary><secondary>SteelBuilder</secondary></indexterm>
+<indexterm><primary>SteelBuilder</primary><secondary>setMarkNo</secondary></indexterm>
+<para><computeroutput><link linkend="_class_steel_builder">SteelBuilder</link> SteelBuilder.setMarkNo (string id)</computeroutput></para></section>
+<anchor xml:id="_class_steel_builder_1adaf705ec7077066dc845ce0191a52bb8"/><section>
+    <title>setPileNo()</title>
+<indexterm><primary>setPileNo</primary><secondary>SteelBuilder</secondary></indexterm>
+<indexterm><primary>SteelBuilder</primary><secondary>setPileNo</secondary></indexterm>
+<para><computeroutput><link linkend="_class_steel_builder">SteelBuilder</link> SteelBuilder.setPileNo (string number)</computeroutput></para></section>
+<anchor xml:id="_class_steel_builder_1a50df5bd700a088cc3debf65854e967fc"/><section>
+    <title>setPileSequence()</title>
+<indexterm><primary>setPileSequence</primary><secondary>SteelBuilder</secondary></indexterm>
+<indexterm><primary>SteelBuilder</primary><secondary>setPileSequence</secondary></indexterm>
+<para><computeroutput><link linkend="_class_steel_builder">SteelBuilder</link> SteelBuilder.setPileSequence (string sequence)</computeroutput></para></section>
+<anchor xml:id="_class_steel_builder_1a3c5e411352fbce8d63c0264f1408fe4c"/><section>
+    <title>setToPile()</title>
+<indexterm><primary>setToPile</primary><secondary>SteelBuilder</secondary></indexterm>
+<indexterm><primary>SteelBuilder</primary><secondary>setToPile</secondary></indexterm>
+<para><computeroutput><link linkend="_class_steel_builder">SteelBuilder</link> SteelBuilder.setToPile (string id)</computeroutput></para></section>
+<anchor xml:id="_class_steel_builder_1a4ab85bf7a20fcaedfbdac15ec7841904"/><section>
+    <title>setUnitW()</title>
+<indexterm><primary>setUnitW</primary><secondary>SteelBuilder</secondary></indexterm>
+<indexterm><primary>SteelBuilder</primary><secondary>setUnitW</secondary></indexterm>
+<para><computeroutput><link linkend="_class_steel_builder">SteelBuilder</link> SteelBuilder.setUnitW (string unitW)</computeroutput></para></section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__steel_builder_8cs">SteelBuilder.cs</link></section>
+</section>

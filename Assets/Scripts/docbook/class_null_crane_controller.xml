@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_null_crane_controller" xml:lang="ko">
+<title>NullCraneController 클래스 참조</title>
+<indexterm><primary>NullCraneController</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_null_crane_controller_1a0c474a098990e0f54ba65fec3cebd20b">move</link> (float spent, float delta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<link linkend="_class_crane_controller">CraneController</link>(으)로부터 상속된 Public 멤버 함수        <itemizedlist>
+            <listitem><para>void <link linkend="_class_crane_controller_1a68a0480f91e1258d0f6c2157c035fe16">Locate</link> (string pileNo)</para>
+
+<para>크레인만의 위치를 조정한다. 크레인의 경우 x 축으로만 움직이므로 pile의 위치값을 받으면 x 값만 바뀐다. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_controller_1ad1f2233f450e2b75662e64c57a9ad24f">SetPreviousEvent</link> (KeyValuePair&lt; int, <link linkend="_class_discrete_event">DiscreteEvent</link> &gt; pair)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_controller_1a41972830aadb56743b012604ede46ab5">SetNextEvent</link> (KeyValuePair&lt; int, <link linkend="_class_discrete_event">DiscreteEvent</link> &gt; pair)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_controller_1ab792bc4dfa6ec9d344114ecb2e937e0a">SearchNextEvent</link> ()</para>
+
+<para>다음 Mode를 탐색하고 넘어간다. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>추가로 상속된 멤버들    </title>
+<link linkend="_class_crane_controller">CraneController</link>(으)로부터 상속된 Public 속성        <itemizedlist>
+            <listitem><para>Vector3 <link linkend="_class_crane_controller_1aaf96b9bec369ffc3e970627023f981d8">offset</link> = new Vector3(0f, 60f, 2f)</para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_crane_controller_1adaec9020914b98acdccf113b15bafa7e">mCenter</link></para>
+
+<para>Crane 에셋의 좌표 문제로 센터를 커스텀으로 지정함. </para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_crane_controller_1a7192a3830e21c0af0be25fc4d2ebd384">mHanger</link></para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_crane_controller_1ace10d6d6ed7a4647681b8306eb2aba08">mUpperHeightLimit</link></para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_crane_controller_1aec877d1cb92931e377ad84704c721a6f">mLowerHeightLimit</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<link linkend="_class_crane_controller">CraneController</link>(으)로부터 상속된 속성        <itemizedlist>
+            <listitem><para>string <link linkend="_class_crane_controller_1aa797b081488cca2dce0dd947259f4bb2">Name</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_null_crane_controller_1a0c474a098990e0f54ba65fec3cebd20b"/><section>
+    <title>move()</title>
+<indexterm><primary>move</primary><secondary>NullCraneController</secondary></indexterm>
+<indexterm><primary>NullCraneController</primary><secondary>move</secondary></indexterm>
+<para><computeroutput>override void NullCraneController.move (float spent, float delta)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput> @namespace
+ @brief [목록에 보여지는 설명]
+ @note 참고 설명
+ @todo 할 일 설명
+ @pre 미리 호출해야 할 사항
+ @bug 버그 설명
+ @warning 참고 링크, 페이지
+ @see 참고할 함수 또는 페이지
+ * @section table_sec 표 삽입 예시
+</computeroutput></literallayout> 표는 다음과 같이 삽입합니다. <informaltable frame="all">
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<thead>
+      <row  class='markdownTableHead'>
+<entry>
+<para>항목   </para>
+</entry><entry>
+<para>설명    </para>
+</entry></row>
+</thead><tbody>
+      <row  class='markdownTableRowOdd'>
+<entry>
+<para>IFigure   </para>
+</entry><entry>
+<para>도형 인터페이스    </para>
+</entry></row>
+      <row  class='markdownTableRowEven'>
+<entry>
+<para>Line   </para>
+</entry><entry>
+<para>IFigure를 상속받은 Line Class   </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+<para>
+<link linkend="_class_crane_controller_1a04a510fbfae5b99368bcfcd7123a4354">CraneController</link>(으)로부터 재구현되었습니다.</para>
+</section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__null_crane_controller_8cs">NullCraneController.cs</link></section>
+</section>

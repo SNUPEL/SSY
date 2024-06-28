@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_crane_controller2" xml:lang="ko">
+<title>CraneController2 클래스 참조</title>
+<indexterm><primary>CraneController2</primary></indexterm>
+<simplesect>
+    <title>Public 멤버 함수    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_crane_controller2_1a614fc2b140eddd4dc5c8fd9a6e6f4115">StartCrane</link> ()</para>
+
+<para>start 상태로 전환한다. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_controller2_1ae869d5369ecc5f28da909dd66ed02ca6">StopCrane</link> ()</para>
+
+<para>stop 상태로 전환한다. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_crane_controller2_1a8118aff0c6d303d01ef0209b9a2c7307">Turn</link> (Direction direction)</para>
+
+<para>Turn 상태로 전환한다. 이 때 방향 또한 direction으로 바꾼다. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public 속성    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_crane_controller2_1a82d48155260e2081f6c8d4f34f03e983">maxSpeed</link> = 2.0f</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_crane_controller2_1a1a0e5e082ee383a455aab58c88da6107">turnDistance</link> = 2.0f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>속성    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_crane_controller2_1afbb6be0c103d77516b929a39e43732f8">CurrentSpeed</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>Direction <link linkend="_class_crane_controller2_1ac672ca9dce2234988435de025a7b42e4">CurrentTurnDirection</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>멤버 함수 문서화</title>
+<anchor xml:id="_class_crane_controller2_1a614fc2b140eddd4dc5c8fd9a6e6f4115"/><section>
+    <title>StartCrane()</title>
+<indexterm><primary>StartCrane</primary><secondary>CraneController2</secondary></indexterm>
+<indexterm><primary>CraneController2</primary><secondary>StartCrane</secondary></indexterm>
+<para><computeroutput>void CraneController2.StartCrane ( )</computeroutput></para><para>
+
+<para>start 상태로 전환한다. </para>
+</para>
+</section>
+<anchor xml:id="_class_crane_controller2_1ae869d5369ecc5f28da909dd66ed02ca6"/><section>
+    <title>StopCrane()</title>
+<indexterm><primary>StopCrane</primary><secondary>CraneController2</secondary></indexterm>
+<indexterm><primary>CraneController2</primary><secondary>StopCrane</secondary></indexterm>
+<para><computeroutput>void CraneController2.StopCrane ( )</computeroutput></para><para>
+
+<para>stop 상태로 전환한다. </para>
+</para>
+</section>
+<anchor xml:id="_class_crane_controller2_1a8118aff0c6d303d01ef0209b9a2c7307"/><section>
+    <title>Turn()</title>
+<indexterm><primary>Turn</primary><secondary>CraneController2</secondary></indexterm>
+<indexterm><primary>CraneController2</primary><secondary>Turn</secondary></indexterm>
+<para><computeroutput>void CraneController2.Turn (Direction direction)</computeroutput></para><para>
+
+<para>Turn 상태로 전환한다. 이 때 방향 또한 direction으로 바꾼다. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+매개변수</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>direction</entry><entry>
+<para>변경할 방향</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>멤버 데이터 문서화</title>
+<anchor xml:id="_class_crane_controller2_1a82d48155260e2081f6c8d4f34f03e983"/><section>
+    <title>maxSpeed</title>
+<indexterm><primary>maxSpeed</primary><secondary>CraneController2</secondary></indexterm>
+<indexterm><primary>CraneController2</primary><secondary>maxSpeed</secondary></indexterm>
+<para><computeroutput>float CraneController2.maxSpeed = 2.0f</computeroutput></para></section>
+<anchor xml:id="_class_crane_controller2_1a1a0e5e082ee383a455aab58c88da6107"/><section>
+    <title>turnDistance</title>
+<indexterm><primary>turnDistance</primary><secondary>CraneController2</secondary></indexterm>
+<indexterm><primary>CraneController2</primary><secondary>turnDistance</secondary></indexterm>
+<para><computeroutput>float CraneController2.turnDistance = 2.0f</computeroutput></para></section>
+</section>
+<section>
+<title>속성 문서화</title>
+<anchor xml:id="_class_crane_controller2_1afbb6be0c103d77516b929a39e43732f8"/><section>
+    <title>CurrentSpeed</title>
+<indexterm><primary>CurrentSpeed</primary><secondary>CraneController2</secondary></indexterm>
+<indexterm><primary>CraneController2</primary><secondary>CurrentSpeed</secondary></indexterm>
+<para><computeroutput>float CraneController2.CurrentSpeed<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_crane_controller2_1ac672ca9dce2234988435de025a7b42e4"/><section>
+    <title>CurrentTurnDirection</title>
+<indexterm><primary>CurrentTurnDirection</primary><secondary>CraneController2</secondary></indexterm>
+<indexterm><primary>CraneController2</primary><secondary>CurrentTurnDirection</secondary></indexterm>
+<para><computeroutput>Direction CraneController2.CurrentTurnDirection<computeroutput>[get]</computeroutput></computeroutput></para></section>
+<para>
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:</para>
+<link linkend="__crane_controller2_8cs">CraneController2.cs</link></section>
+</section>

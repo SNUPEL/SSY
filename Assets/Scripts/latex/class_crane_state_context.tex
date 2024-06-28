@@ -1,0 +1,67 @@
+\doxysection{Crane\+State\+Context 클래스 참조}
+\label{class_crane_state_context}\index{CraneStateContext@{CraneStateContext}}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Crane\+State\+Context} (\textbf{ Crane\+Controller2} crane\+Controller)
+\begin{DoxyCompactList}\small\item\em 크레인의 현재 상태를 가리키는 public 속성을 노출하여 모든 상태 변경을 인식한다. 개체 속성을 통해 현재 상태를 업데이트하고 \doxyref{Transition()}{페이지}{class_crane_state_context_ac9d8f5c32846cf08594fc28054df4b84} 함수를 호출하여 업데이트한 상태로 전환할 수 있다. 예를 들면 각 상태 클래스가 다음 상태 클래스를 선언해서 상태를 함께 연결해 체인을 만드는 경우에 유용한 메커니즘이다. \end{DoxyCompactList}\item 
+void \textbf{ Transition} ()
+\begin{DoxyCompactList}\small\item\em 다음으로 Context 오브젝트의 \doxyref{Transition()}{페이지}{class_crane_state_context_ac9d8f5c32846cf08594fc28054df4b84} 함수를 호출하여 연결된 상태를 순환할 수 있다. 반드시 필요한 방식은 아니므로 오버로드한 \doxyref{Transition()}{페이지}{class_crane_state_context_ac9d8f5c32846cf08594fc28054df4b84} 함수를 호출하고 전환하고 싶은 상태를 전달할 것이다. \end{DoxyCompactList}\item 
+void \textbf{ Transition} (\textbf{ ICrane\+State} state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{속성}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ ICrane\+State} \textbf{ Current\+State}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\index{CraneStateContext@{CraneStateContext}!CraneStateContext@{CraneStateContext}}
+\index{CraneStateContext@{CraneStateContext}!CraneStateContext@{CraneStateContext}}
+\doxysubsubsection{CraneStateContext()}
+{\footnotesize\ttfamily \label{class_crane_state_context_aed29c65aaadcf3ff4e6a3cb9f8e88bf2} 
+Crane\+State\+Context.\+Crane\+State\+Context (\begin{DoxyParamCaption}\item[{\textbf{ Crane\+Controller2}}]{crane\+Controller}{}\end{DoxyParamCaption})}
+
+
+
+크레인의 현재 상태를 가리키는 public 속성을 노출하여 모든 상태 변경을 인식한다. 개체 속성을 통해 현재 상태를 업데이트하고 \doxyref{Transition()}{페이지}{class_crane_state_context_ac9d8f5c32846cf08594fc28054df4b84} 함수를 호출하여 업데이트한 상태로 전환할 수 있다. 예를 들면 각 상태 클래스가 다음 상태 클래스를 선언해서 상태를 함께 연결해 체인을 만드는 경우에 유용한 메커니즘이다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em crane\+Controller} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{멤버 함수 문서화}
+\index{CraneStateContext@{CraneStateContext}!Transition@{Transition}}
+\index{Transition@{Transition}!CraneStateContext@{CraneStateContext}}
+\doxysubsubsection{Transition()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_crane_state_context_ac9d8f5c32846cf08594fc28054df4b84} 
+void Crane\+State\+Context.\+Transition (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+다음으로 Context 오브젝트의 \doxyref{Transition()}{페이지}{class_crane_state_context_ac9d8f5c32846cf08594fc28054df4b84} 함수를 호출하여 연결된 상태를 순환할 수 있다. 반드시 필요한 방식은 아니므로 오버로드한 \doxyref{Transition()}{페이지}{class_crane_state_context_ac9d8f5c32846cf08594fc28054df4b84} 함수를 호출하고 전환하고 싶은 상태를 전달할 것이다. 
+
+\index{CraneStateContext@{CraneStateContext}!Transition@{Transition}}
+\index{Transition@{Transition}!CraneStateContext@{CraneStateContext}}
+\doxysubsubsection{Transition()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_crane_state_context_a68ddfb35bfe63333ebc48394a7d85191} 
+void Crane\+State\+Context.\+Transition (\begin{DoxyParamCaption}\item[{\textbf{ ICrane\+State}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{속성 문서화}
+\index{CraneStateContext@{CraneStateContext}!CurrentState@{CurrentState}}
+\index{CurrentState@{CurrentState}!CraneStateContext@{CraneStateContext}}
+\doxysubsubsection{CurrentState}
+{\footnotesize\ttfamily \label{class_crane_state_context_afdb25cfeb503f11261c5d9ab73a527f5} 
+\textbf{ ICrane\+State} Crane\+State\+Context.\+Current\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Crane\+State\+Context.\+cs}\end{DoxyCompactItemize}

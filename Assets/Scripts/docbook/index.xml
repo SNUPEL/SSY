@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="ko">
+    <info>
+    <title>ssy</title>
+    </info>
+<chapter>
+    <title>클래스 문서화</title>
+    <xi:include href="class_crane_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_crane_controller2.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_crane_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_crane_start_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_crane_state_context.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_crane_stop_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_crane_turn_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_discrete_event.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_discrete_event_builder.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_discrete_event_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interface_i_crane_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_mono_behaviour.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_null_crane_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_pile.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_s_s_y_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_steel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_steel_builder.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_steel_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_stock_layout.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_truck.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>파일 문서화</title>
+    <xi:include href="_crane_controller_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_crane_controller2_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_crane_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_crane_start_state_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_crane_state_context_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_crane_stop_state_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_crane_turn_state_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_discrete_event_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_discrete_event_builder_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_discrete_event_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_i_crane_state_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_mode_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_null_crane_controller_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_pile_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_s_s_y_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_steel_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_steel_builder_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_steel_manager_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_stock_layout_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_truck_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

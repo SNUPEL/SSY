@@ -1,0 +1,144 @@
+\doxysection{Stock\+Layout 클래스 참조}
+\label{class_stock_layout}\index{StockLayout@{StockLayout}}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Initialize\+Layout} ()
+\begin{DoxyCompactList}\small\item\em 조선소 작업장의 레이아웃을 초기화한다. 각 파일 객체를 초기화(위치 선정, 이름 결정) \end{DoxyCompactList}\item 
+void \textbf{ Put\+Down} (string pile\+No, string steel)
+\item 
+Vector3 \textbf{ get\+Pile\+Location} (string pile\+No)
+\begin{DoxyCompactList}\small\item\em 적치장 파일의 위치를 반환한다. \end{DoxyCompactList}\item 
+Vector3 \textbf{ get\+Exect\+Steel\+Location} (string pile\+No)
+\item 
+float \textbf{ Get\+Pile\+Height} (string pile\+No)
+\begin{DoxyCompactList}\small\item\em 파일의 적치된 강재 총 높이를 구하여 새로운 강재를 놓을 경우 높이를 반환한다. \end{DoxyCompactList}\item 
+void \textbf{ Remove\+Steel} (string pile\+No, Game\+Object m\+Steel)
+\item 
+void \textbf{ Add\+Steel} (string pile\+No, Game\+Object m\+Steel)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Stock\+Layout} \textbf{ Get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \textbf{ m\+Point}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{속성}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, Game\+Object $>$ \textbf{ Piles}\hspace{0.3cm}{\ttfamily  [get]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{멤버 함수 문서화}
+\index{StockLayout@{StockLayout}!AddSteel@{AddSteel}}
+\index{AddSteel@{AddSteel}!StockLayout@{StockLayout}}
+\doxysubsubsection{AddSteel()}
+{\footnotesize\ttfamily \label{class_stock_layout_ad40c51cc87b00d35ef5531facc766ef1} 
+void Stock\+Layout.\+Add\+Steel (\begin{DoxyParamCaption}\item[{string}]{pile\+No}{, }\item[{Game\+Object}]{m\+Steel}{}\end{DoxyParamCaption})}
+
+\index{StockLayout@{StockLayout}!getExectSteelLocation@{getExectSteelLocation}}
+\index{getExectSteelLocation@{getExectSteelLocation}!StockLayout@{StockLayout}}
+\doxysubsubsection{getExectSteelLocation()}
+{\footnotesize\ttfamily \label{class_stock_layout_acad0b17511e5cb266e0a13efbdf32e13} 
+Vector3 Stock\+Layout.\+get\+Exect\+Steel\+Location (\begin{DoxyParamCaption}\item[{string}]{pile\+No}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{매개변수}
+{\em pile\+No} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+
+\end{DoxyReturn}
+\index{StockLayout@{StockLayout}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!StockLayout@{StockLayout}}
+\doxysubsubsection{GetInstance()}
+{\footnotesize\ttfamily \label{class_stock_layout_a542f50daf7e203cf178296df654973e4} 
+static \textbf{ Stock\+Layout} Stock\+Layout.\+Get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\index{StockLayout@{StockLayout}!GetPileHeight@{GetPileHeight}}
+\index{GetPileHeight@{GetPileHeight}!StockLayout@{StockLayout}}
+\doxysubsubsection{GetPileHeight()}
+{\footnotesize\ttfamily \label{class_stock_layout_a77136ea195df3e409c3ae86ff45b6641} 
+float Stock\+Layout.\+Get\+Pile\+Height (\begin{DoxyParamCaption}\item[{string}]{pile\+No}{}\end{DoxyParamCaption})}
+
+
+
+파일의 적치된 강재 총 높이를 구하여 새로운 강재를 놓을 경우 높이를 반환한다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em pile\+No} & 적치할 파일의 넘버\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+파일의 쌓여진 높이
+\end{DoxyReturn}
+\index{StockLayout@{StockLayout}!getPileLocation@{getPileLocation}}
+\index{getPileLocation@{getPileLocation}!StockLayout@{StockLayout}}
+\doxysubsubsection{getPileLocation()}
+{\footnotesize\ttfamily \label{class_stock_layout_af94d5710112d194e83fc226d2db2f2ed} 
+Vector3 Stock\+Layout.\+get\+Pile\+Location (\begin{DoxyParamCaption}\item[{string}]{pile\+No}{}\end{DoxyParamCaption})}
+
+
+
+적치장 파일의 위치를 반환한다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em pile\+No} & 파일 번호\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+
+\end{DoxyReturn}
+\index{StockLayout@{StockLayout}!InitializeLayout@{InitializeLayout}}
+\index{InitializeLayout@{InitializeLayout}!StockLayout@{StockLayout}}
+\doxysubsubsection{InitializeLayout()}
+{\footnotesize\ttfamily \label{class_stock_layout_a42ad8c577b676a64cee6bd9695ab796b} 
+void Stock\+Layout.\+Initialize\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+조선소 작업장의 레이아웃을 초기화한다. 각 파일 객체를 초기화(위치 선정, 이름 결정) 
+
+\index{StockLayout@{StockLayout}!PutDown@{PutDown}}
+\index{PutDown@{PutDown}!StockLayout@{StockLayout}}
+\doxysubsubsection{PutDown()}
+{\footnotesize\ttfamily \label{class_stock_layout_a04a6cc7260aef84df89e0b6ff1f08ea8} 
+void Stock\+Layout.\+Put\+Down (\begin{DoxyParamCaption}\item[{string}]{pile\+No}{, }\item[{string}]{steel}{}\end{DoxyParamCaption})}
+
+\index{StockLayout@{StockLayout}!RemoveSteel@{RemoveSteel}}
+\index{RemoveSteel@{RemoveSteel}!StockLayout@{StockLayout}}
+\doxysubsubsection{RemoveSteel()}
+{\footnotesize\ttfamily \label{class_stock_layout_a97aafd96b96721a2ae4192cb9178bcf9} 
+void Stock\+Layout.\+Remove\+Steel (\begin{DoxyParamCaption}\item[{string}]{pile\+No}{, }\item[{Game\+Object}]{m\+Steel}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\index{StockLayout@{StockLayout}!mPoint@{mPoint}}
+\index{mPoint@{mPoint}!StockLayout@{StockLayout}}
+\doxysubsubsection{mPoint}
+{\footnotesize\ttfamily \label{class_stock_layout_a671dd3714fadb23ceee3d75c6c1e563c} 
+Game\+Object Stock\+Layout.\+m\+Point}
+
+
+
+\doxysubsection{속성 문서화}
+\index{StockLayout@{StockLayout}!Piles@{Piles}}
+\index{Piles@{Piles}!StockLayout@{StockLayout}}
+\doxysubsubsection{Piles}
+{\footnotesize\ttfamily \label{class_stock_layout_a4bd6161d2a591331deb96aa4e62deda9} 
+Dictionary$<$string, Game\+Object$>$ Stock\+Layout.\+Piles\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Stock\+Layout.\+cs}\end{DoxyCompactItemize}
