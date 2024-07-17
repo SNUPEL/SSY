@@ -37,7 +37,7 @@ public class CraneManager : MonoBehaviour
         return Cranes.First(x => x.name == crane).GetComponent<CraneController>();
     }
 
-    /// <summary>
+    /// <summary>   
     /// 크레인을 초기화한다.
     /// 본 강재적치장에서는 두 개의 크레인만 존재하기 때문에 동적이 아닌 하드코드로 구현한다.
     /// 반드시 StockLayout이 먼저 초기화되어야 함
