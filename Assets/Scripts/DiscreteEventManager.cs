@@ -10,6 +10,9 @@ public class DiscreteEventManager : MonoBehaviour
     private Dictionary <int, DiscreteEvent> mEvents;
     private bool isFirstLine = true;
 
+    private const string mUrlResult_withA = "C:\\Users\\cwss0\\repos\\SSY\\Assets\\Inputs\\result.csv";
+    private const string mUrlResult_withB = "C:\\Users\\cwss0\\repos\\SSY\\Assets\\Inputs\\result.csv";
+
     /// <summary>
     /// ø¢ºø ∆ƒ¿œ¿« º”º∫ Index
     /// </summary>
@@ -44,7 +47,12 @@ public class DiscreteEventManager : MonoBehaviour
         }
     }
 
-    public void InitializeEvents(string url)
+    public void Initialize()
+    {
+        InitializeEvents(mUrlResult_withA);
+        InitializeEvents(mUrlResult_withB);
+    }
+    private void InitializeEvents(string url)
     {
         if (!File.Exists(url))
         {

@@ -18,10 +18,6 @@ public class SSYManager : MonoBehaviour
     private float mSpent = 0f;
     private float mStep = 0.1f;
 
-    private const string mUrlReshuffle = "C:\\Users\\cwss0\\repos\\SSY\\Assets\\Inputs\\reshuffle.csv";
-    private const string mUrlRetrieval = "C:\\Users\\cwss0\\repos\\SSY\\Assets\\Inputs\\retrieval.csv";
-    private const string mUrlResult = "C:\\Users\\cwss0\\repos\\SSY\\Assets\\Inputs\\result.csv";
-
     public static SSYManager GetInstance()
     {
         if (mInstance == null)
@@ -50,11 +46,10 @@ public class SSYManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StockLayout.GetInstance().InitializeLayout();
-        SteelManager.GetInstance().InitializePiles(mUrlReshuffle);
-        SteelManager.GetInstance().InitializePiles(mUrlRetrieval);
-        CraneManager.GetInstance().InitializeCrane();
-        DiscreteEventManager.GetInstance().InitializeEvents(mUrlResult);
+        StockLayout.GetInstance().Initialize();
+        SteelManager.GetInstance().Initialize();
+        CraneManager.GetInstance().Initialize();
+        DiscreteEventManager.GetInstance().Initialize();
 
         InitializeSimulation();
     }

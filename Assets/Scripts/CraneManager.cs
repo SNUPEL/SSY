@@ -42,7 +42,7 @@ public class CraneManager : MonoBehaviour
     /// 본 강재적치장에서는 두 개의 크레인만 존재하기 때문에 동적이 아닌 하드코드로 구현한다.
     /// 반드시 StockLayout이 먼저 초기화되어야 함
     /// </summary>
-    public void InitializeCrane()
+    public void Initialize()
     {
         GameObject _crane_1 = Instantiate(mPrefabOverheadCrane);
         _crane_1.GetComponent<CraneController>().Locate("cn1");

@@ -178,7 +178,8 @@ public class CraneController : MonoBehaviour
         mDelta = delta;
         mSpent += mDelta;
         if (mSpent < mWorkingTime / 2)
-        {
+
+        { 
             float _bottom = StockLayout.GetInstance().GetPileHeight(mCurrent.Value.Location);
             float _distance = (_bottom - mHanger.transform.position.y);
             float _leftTime = Mathf.Abs(mWorkingTime / 2 - mSpent);
