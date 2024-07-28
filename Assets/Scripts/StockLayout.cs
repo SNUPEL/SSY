@@ -10,12 +10,6 @@ using UnityEngine.UIElements;
 /// </summary>
 public class StockLayout : MonoBehaviour
 {
-    private static StockLayout mInstance;
-
-    public GameObject mPoint;
-    private Vector3 mPileAPivot = new Vector3(1938.5f, 0f, -151.5f);
-    private Vector3 mPileBPivot = new Vector3();
-    private Vector3 mB00 = new Vector3(2033.8f, 0, -100);
     private float mPileWidth = 49f;
     private float mPileHeight = 108f;
     private int xCount = 43;
@@ -24,25 +18,11 @@ public class StockLayout : MonoBehaviour
     private Dictionary<string, GameObject> mPilesA;
     private Dictionary<string, GameObject> mPilesB;
 
-    public static StockLayout GetInstance()
-    {
-        if (mInstance == null)
-        {
-            mInstance = FindObjectOfType<StockLayout>();
-            if (mInstance == null )
-            {
-                GameObject _object = new GameObject();
-                _object.name = typeof(StockLayout).Name;
-                mInstance = _object.AddComponent<StockLayout>();
-            }
-        }
-        return mInstance;
-    }
 
     /// <summary>
     /// A 적치장 내 파일을 관리합니다.
     /// </summary>
-    public Dictionary<string, GameObject> PilesA
+    public Dictionary<string, GameObject> Piles
     {
         get
         {
@@ -67,44 +47,47 @@ public class StockLayout : MonoBehaviour
     /// 조선소 작업장의 레이아웃 A와 B를 초기화한다.
     /// 각 파일 객체를 초기화(위치 선정, 이름 결정)
     /// </summary>
-    public void Initialize()
+    public void Initialize(Vector3 pivot)
     {
-        InitializeLayout(mPileAPivot);
-        InitializeLayout(mPileBPivot);
+        InitializeLayout(pivot);
+        //InitializeLayout(mPileBPivot);
     }
 
     private void InitializeLayout(Vector3 pivot)
     {
-        string _pileName = (pivot == mPileAPivot) ? "PilesA" : "PilesB";
-        GameObject _parentPile = new GameObject(_pileName);
+        GameObject _parentPile = new GameObject("Piles");
+        _parentPile.transform.SetParent(this.transform.parent);
         for (int y = 0; y < yCount; y++)
         {
             for (int x = 0; x < xCount; x++)
             {
                 if (y == 0 && (x == 20 || x == 24 || x == 42))
                     continue;
-                GameObject _pile = Instantiate(mPoint);
+                GameObject _pile = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Sphere), _parentPile.transform, true);
                 _pile.AddComponent<Pile>();
                 _pile.transform.position = place(x, y, pivot);
                 _pile.name = naming(x + 1, y);
                 _pile.transform.parent = _parentPile.transform;
-                if (pivot == mPileAPivot)
-                    PilesA.Add(_pile.name, _pile);
-                else
-                    PilesB.Add(_pile.name, _pile);
+                Piles.Add(_pile.name, _pile);
             }
         }
 
         // B00 추가
-        GameObject _b00 = Instantiate(mPoint, _parentPile.transform, true);
+        GameObject _b00 = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Sphere), _parentPile.transform, true);
         _b00.name = "B00";
         _b00.AddComponent<Pile>();
-        _b00.transform.position = mB00;
+        _b00.transform.position = this.transform.parent.GetComponent<SSYManager>().mPivot + new Vector3(95.7f, 0, 108f);
         _b00.transform.parent = _parentPile.transform;
-        if (pivot == mPileAPivot)
-            PilesA.Add(_b00.name, _b00);
-        else
-            PilesB.Add(_b00.name, _b00);
+        Piles.Add(_b00.name, _b00);
+
+        // A00 추가
+        GameObject _a00 = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Sphere), _parentPile.transform, true);
+        _a00.name = "A00";
+        _a00.AddComponent<Pile>();
+        _a00.transform.position = this.transform.parent.GetComponent<SSYManager>().mPivot + new Vector3(95.7f, 0, 0);
+        _a00.transform.parent = _parentPile.transform;
+        Piles.Add(_a00.name, _a00);
+
     }
 
     private string naming(int x, int y)
@@ -133,23 +116,17 @@ public class StockLayout : MonoBehaviour
         return (pivot + new Vector3(-i * mPileWidth, 0, j * mPileHeight));
     }
 
-    public void PutDown(string pileNo, string steel, LayoutType type)
+    /// <summary>
+    /// 시뮬레이션 시작 전, 강재를 파일 위에 둔다.
+    /// </summary>
+    /// <param name="pileNo"></param>
+    /// <param name="steel"></param>
+    /// <param name="type"></param>
+    public void InitializeSteels(string pileNo, GameObject steel)
     {
-        switch (type)
-        {
-            case LayoutType.A:
-                if (!PilesA[pileNo].transform.Find(steel))
-                    return;
-                PilesA[pileNo].GetComponent<Pile>().AddChild(steel);
-                break;
-            case LayoutType.B:
-                if (!PilesB[pileNo].transform.Find(steel))
-                    return;
-                PilesB[pileNo].GetComponent<Pile>().AddChild(steel);
-                break;
-            default:
-                break;
-        }
+        if (!Piles[pileNo].transform.Find(steel.name))
+            return;
+        steel.transform.SetParent(Piles[pileNo].transform, false);
     }
 
     /// <summary>
@@ -159,9 +136,9 @@ public class StockLayout : MonoBehaviour
     /// <returns></returns>
     public Vector3 getPileLocation(string pileNo)
     {
-        if (!PilesA.ContainsKey(pileNo))
+        if (!Piles.ContainsKey(pileNo))
             return new Vector3(-1, -1, -1);
-        return PilesA[pileNo].transform.position;
+        return Piles[pileNo].transform.position;
     }
 
     /// <summary>
@@ -171,9 +148,9 @@ public class StockLayout : MonoBehaviour
     /// <returns></returns>
     public Vector3 getExactSteelLocation(string pileNo)
     {
-        if (!PilesA.ContainsKey(pileNo))
+        if (!Piles.ContainsKey(pileNo) && !PilesB.ContainsKey(pileNo))
             return new Vector3(-1, -1, -1);
-        GameObject _pile = PilesA[pileNo];
+        GameObject _pile = Piles[pileNo];
         return new Vector3(_pile.transform.position.x, _pile.GetComponent<Pile>().GetHeight(), _pile.transform.position.z);
     }
 
@@ -184,26 +161,26 @@ public class StockLayout : MonoBehaviour
     /// <returns>파일의 쌓여진 높이</returns>
     public float GetPileHeight(string pileNo)
     {
-        if (!PilesA.ContainsKey(pileNo))
+        if (!Piles.ContainsKey(pileNo))
             return -1;
-        return PilesA[pileNo].GetComponent<Pile>().GetHeight();
-    }
-
-    public void RemoveSteel(string pileNo, GameObject mSteel)
-    {
-        PilesA[pileNo].GetComponent<Pile>().Remove(mSteel.name);
+        return Piles[pileNo].GetComponent<Pile>().GetHeight();
     }
 
     public void AddSteel(string pileNo, GameObject mSteel)
     {
-        PilesA[pileNo].GetComponent<Pile>().AddChild(mSteel.name);
+        mSteel.transform.SetParent(Piles[pileNo].transform);
     }
 
+    /// <summary>
+    /// 이동이 끝난 강재를 반출한다.
+    /// 가시성을 
+    /// </summary>
+    /// <param name="pileNo"></param>
     public void Release(string pileNo)
     {
-        if (StockLayout.GetInstance().PilesA[pileNo].transform.childCount == 0) 
+        if (Piles[pileNo].transform.childCount == 0) 
             return;
-        StockLayout.GetInstance().PilesA[pileNo].transform.GetChild(0).gameObject.SetActive(false);
-        StockLayout.GetInstance().PilesA[pileNo].transform.GetChild(0).transform.SetParent(SteelManager.GetInstance().ParentSteel.transform);
+        Piles[pileNo].transform.GetChild(0).gameObject.SetActive(false);
+        Piles[pileNo].transform.GetChild(0).transform.SetParent(this.transform.parent.GetComponent<SSYManager>().GetParentSteel().transform);
     }
 }

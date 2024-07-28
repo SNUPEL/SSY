@@ -10,9 +10,6 @@ public class DiscreteEventManager : MonoBehaviour
     private Dictionary <int, DiscreteEvent> mEvents;
     private bool isFirstLine = true;
 
-    private const string mUrlResult_withA = "C:\\Users\\cwss0\\repos\\SSY\\Assets\\Inputs\\result.csv";
-    private const string mUrlResult_withB = "C:\\Users\\cwss0\\repos\\SSY\\Assets\\Inputs\\result.csv";
-
     /// <summary>
     /// ø¢ºø ∆ƒ¿œ¿« º”º∫ Index
     /// </summary>
@@ -21,21 +18,6 @@ public class DiscreteEventManager : MonoBehaviour
     private const int mIndexCrane = 2;
     private const int mIndexLocation = 3;
     private const int mIndexPlate = 4;
-
-    public static DiscreteEventManager GetInstance()
-    {
-        if (mInstance == null)
-        {
-            mInstance = FindObjectOfType<DiscreteEventManager>();
-            if (mInstance == null)
-            {
-                GameObject _gameObject = new GameObject();
-                _gameObject.name = typeof(DiscreteEventManager).Name;
-                mInstance = _gameObject.AddComponent<DiscreteEventManager>();
-            }
-        }
-        return mInstance;
-    }
 
     public Dictionary <int, DiscreteEvent> Events
     {
@@ -47,10 +29,9 @@ public class DiscreteEventManager : MonoBehaviour
         }
     }
 
-    public void Initialize()
+    public void Initialize(string url)
     {
-        InitializeEvents(mUrlResult_withA);
-        InitializeEvents(mUrlResult_withB);
+        InitializeEvents(url);
     }
     private void InitializeEvents(string url)
     {
@@ -72,9 +53,19 @@ public class DiscreteEventManager : MonoBehaviour
             }
             string[] _data = _line.Split(',');
             DiscreteEventBuilder _eventBuilder = new DiscreteEventBuilder();
-            DiscreteEvent _event = _eventBuilder.setTimestamp(_data[mIndexTime]).setMode(_data[mIndexEvent]).setCrane(_data[mIndexCrane]).setLocation(_data[mIndexLocation]).setPlate(_data[mIndexPlate]).Build();
+            DiscreteEvent _event = _eventBuilder
+                .setTimestamp(_data[mIndexTime])
+                .setMode(_data[mIndexEvent])
+                .setCrane(getCrane(_data[mIndexCrane]))
+                .setLocation(_data[mIndexLocation])
+                .setPlate(_data[mIndexPlate]).Build();
             Events.Add(_index++, _event);
         }
         isFirstLine = true;
+    }
+
+    private Crane getCrane(string crane)
+    {
+        return this.transform.parent.GetComponent<SSYManager>().GetCrane(crane);
     }
 }

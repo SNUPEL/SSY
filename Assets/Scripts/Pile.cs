@@ -13,20 +13,4 @@ public class Pile : MonoBehaviour
     {
         return this.gameObject.transform.childCount * steelHeight;
     }
-
-    public void AddChild(string name)
-    {
-        if (this.gameObject.transform.Find(name) == null)
-        {
-            SteelManager.GetInstance().Steels.First(x => x.name == name).transform.SetParent(this.gameObject.transform);
-        }
-            
-    }
-    public void Remove(string name) 
-    {
-        if (this.gameObject.transform.Find(name) != null)
-        {
-            SteelManager.GetInstance().Steels.First(x => x.name == name).transform.SetParent(null);
-        }
-    }
 }

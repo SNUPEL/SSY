@@ -6,7 +6,7 @@ public class DiscreteEvent : MonoBehaviour
 {
     private float mTimestamp;
     private Mode mMode;
-    private CraneController mCrane;
+    private Crane mCrane;
     private string mLocation;
     private string mPlate;
 
@@ -22,7 +22,7 @@ public class DiscreteEvent : MonoBehaviour
         set { mMode = value; }
     }
     
-    public CraneController Crane
+    public Crane Crane
     {
         get { return mCrane; }
         set { mCrane = value; }

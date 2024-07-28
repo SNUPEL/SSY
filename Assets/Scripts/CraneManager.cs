@@ -8,33 +8,23 @@ public class CraneManager : MonoBehaviour
 {
     private static CraneManager mInstance;
     public GameObject mPrefabOverheadCrane;
+    private DiscreteEventManager mDiscreteEventManager;
     private List<GameObject> mCranes;
 
     private const string mNullCrane = "";
-
-    public static CraneManager GetInstance()
-    {
-        if (mInstance == null)
-        {
-            mInstance = FindObjectOfType<CraneManager>();
-            if (mInstance == null)
-            {
-                GameObject _gameObject = new GameObject();
-                _gameObject.name = typeof(CraneManager).Name;
-                mInstance = _gameObject.AddComponent<CraneManager>();
-            }
-        }
-        return mInstance;
-    }
 
     /// <summary>
     /// 크레인 객체를 반환한다.
     /// </summary>
     /// <param name="crane"></param>
     /// <returns></returns>
-    public CraneController GetCrane(string crane)
+    public Crane GetCrane(string crane)
     {
-        return Cranes.First(x => x.name == crane).GetComponent<CraneController>();
+        return Cranes.First(x => x.name == crane).GetComponent<Crane>();
+    }
+
+    public void Start()
+    {
     }
 
     /// <summary>   
@@ -44,27 +34,48 @@ public class CraneManager : MonoBehaviour
     /// </summary>
     public void Initialize()
     {
-        GameObject _crane_1 = Instantiate(mPrefabOverheadCrane);
-        _crane_1.GetComponent<CraneController>().Locate("cn1");
-        _crane_1.GetComponent<CraneController>().Name = "Crane-1";
+        mPrefabOverheadCrane = Resources.Load<GameObject>("Prefabs/OverheadCrane");
+        // Layout A의 Crane 정의
+        GameObject _crane_1 = Instantiate(mPrefabOverheadCrane, this.transform.parent.GetComponent<SSYManager>().mPivot + new Vector3(0, 120.4f, 76.8f), Quaternion.identity);
+        _crane_1.GetComponent<Crane>().SetStockLayout(this.transform.parent.GetComponent<SSYManager>().StockLayout);
+        _crane_1.GetComponent<Crane>().Locate("cn1");
+        _crane_1.GetComponent<Crane>().Name = "Crane-1";
         _crane_1.name = "Crane-1";
+        _crane_1.transform.SetParent(this.transform.parent);
+        _crane_1.GetComponent<Crane>().SetDiscreteEventManager(mDiscreteEventManager);
         Cranes.Add( _crane_1);
-        GameObject _crane_2 = Instantiate(mPrefabOverheadCrane);
-        _crane_2.GetComponent<CraneController>().Locate("cn2");
-        _crane_2.GetComponent<CraneController>().Name = "Crane-2";
+
+        GameObject _crane_2 = Instantiate(mPrefabOverheadCrane, this.transform.parent.GetComponent<SSYManager>().mPivot + new Vector3(0, 120.4f, 76.8f), Quaternion.identity);
+        _crane_2.GetComponent<Crane>().SetStockLayout(this.transform.parent.GetComponent<SSYManager>().StockLayout);
+        _crane_2.GetComponent<Crane>().Locate("cn2");
+        _crane_2.GetComponent<Crane>().Name = "Crane-2";
         _crane_2.name = "Crane-2";
+        _crane_2.transform.SetParent(this.transform.parent);
+        _crane_2.GetComponent<Crane>().SetDiscreteEventManager(mDiscreteEventManager);
         Cranes.Add(_crane_2);
+        
         GameObject _crane_empty = new GameObject();
-        _crane_empty.AddComponent<NullCraneController>();
-        _crane_empty.GetComponent<NullCraneController>().Name = mNullCrane;
+        _crane_empty.AddComponent<NullCrane>();
+        _crane_empty.GetComponent<NullCrane>().Name = mNullCrane;
+        _crane_empty.GetComponent<NullCrane>().SetStockLayout(this.transform.parent.GetComponent<SSYManager>().StockLayout);
         _crane_empty.name = mNullCrane;
+        _crane_empty.transform.SetParent(this.transform.parent); 
+        _crane_empty.GetComponent<NullCrane>().SetDiscreteEventManager(mDiscreteEventManager);
         Cranes.Add(_crane_empty);
+
+        // Layout B의 Crane 정의
+
     }
 
     public void Move(float spent, float delta)
     {
         foreach (var crane in Cranes)
-            crane.GetComponent<CraneController>().move(spent, delta);
+            crane.GetComponent<Crane>().move(spent, delta);
+    }
+
+    public void SetDiscreteEventManager(DiscreteEventManager discreteEventManager)
+    {
+        this.mDiscreteEventManager = discreteEventManager;
     }
 
     public List<GameObject> Cranes

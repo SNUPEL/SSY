@@ -21,10 +21,9 @@ public class DiscreteEventBuilder : MonoBehaviour
         return this;
     }
 
-    public DiscreteEventBuilder setCrane (string crane)
+    public DiscreteEventBuilder setCrane (Crane crane)
     {
-        
-        mEvent.Crane = CraneManager.GetInstance().GetCrane(crane);
+        mEvent.Crane = crane;
         return this;
     }
 

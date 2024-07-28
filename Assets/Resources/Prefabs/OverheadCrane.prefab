@@ -4039,7 +4039,7 @@ GameObject:
   - component: {fileID: 4496287503754775873}
   - component: {fileID: 7818629535853302763}
   m_Layer: 0
-  m_Name: Crane
+  m_Name: OverheadCrane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
