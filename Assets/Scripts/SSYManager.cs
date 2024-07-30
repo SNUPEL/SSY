@@ -16,9 +16,8 @@ public class SSYManager : MonoBehaviour
     private CraneManager mCraneManager;
     private DiscreteEventManager mDiscreteEventManager;
 
-    private int mTimestamp = 0;
     private float mSpent = 0f;
-    private const float mStep = 0.1f;
+    private float mStep = 1f;
 
     public Camera mCamera;
     public TextAsset mUrlResult;

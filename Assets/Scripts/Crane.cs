@@ -26,9 +26,6 @@ public class Crane : MonoBehaviour
     private KeyValuePair<int, DiscreteEvent> mCurrent;
     private KeyValuePair<int, DiscreteEvent> mNext;
 
-    private string mPileNo = string.Empty;
-    private float mSpeed = 2f;
-
     private const float mWorkingTime = 1f;
     private float mSpent = 0;
     private float mDelta = 0;
@@ -65,7 +62,6 @@ public class Crane : MonoBehaviour
         _to.y = this.gameObject.transform.position.y;
         _to.z = this.gameObject.transform.position.z;
         this.gameObject.transform.position = _to;
-        mPileNo = pileNo;
     }
 
     public void SetPreviousEvent(KeyValuePair<int, DiscreteEvent> pair)

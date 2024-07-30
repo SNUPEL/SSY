@@ -50,12 +50,12 @@ public class StockLayout : MonoBehaviour
     public void Initialize(Vector3 pivot)
     {
         InitializeLayout(pivot);
-        //InitializeLayout(mPileBPivot);
     }
 
     private void InitializeLayout(Vector3 pivot)
     {
         GameObject _parentPile = new GameObject("Piles");
+        GameObject _point = Resources.Load<GameObject>("Prefabs/point");
         _parentPile.transform.SetParent(this.transform.parent);
         for (int y = 0; y < yCount; y++)
         {
@@ -63,7 +63,7 @@ public class StockLayout : MonoBehaviour
             {
                 if (y == 0 && (x == 20 || x == 24 || x == 42))
                     continue;
-                GameObject _pile = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Sphere), _parentPile.transform, true);
+                GameObject _pile = Instantiate(_point, _parentPile.transform, true);
                 _pile.AddComponent<Pile>();
                 _pile.transform.position = place(x, y, pivot);
                 _pile.name = naming(x + 1, y);
@@ -73,7 +73,7 @@ public class StockLayout : MonoBehaviour
         }
 
         // B00 추가
-        GameObject _b00 = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Sphere), _parentPile.transform, true);
+        GameObject _b00 = Instantiate(_point, _parentPile.transform, true);
         _b00.name = "B00";
         _b00.AddComponent<Pile>();
         _b00.transform.position = this.transform.parent.GetComponent<SSYManager>().mPivot + new Vector3(95.7f, 0, 108f);
@@ -81,7 +81,7 @@ public class StockLayout : MonoBehaviour
         Piles.Add(_b00.name, _b00);
 
         // A00 추가
-        GameObject _a00 = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Sphere), _parentPile.transform, true);
+        GameObject _a00 = Instantiate(_point, _parentPile.transform, true);
         _a00.name = "A00";
         _a00.AddComponent<Pile>();
         _a00.transform.position = this.transform.parent.GetComponent<SSYManager>().mPivot + new Vector3(95.7f, 0, 0);
