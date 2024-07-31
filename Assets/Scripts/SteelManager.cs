@@ -7,8 +7,7 @@ using UnityEngine;
 public class SteelManager : MonoBehaviour
 {
     private static SteelManager mInstance;
-    private List<GameObject> mSteelsA;
-    private List<GameObject> mSteelsB;
+    private List<GameObject> mSteels;
     private bool isFirstLine = true;
     private const int mIndexPileNo = 0;
     private const int mIndexPileSeq = 1;
@@ -52,20 +51,9 @@ public class SteelManager : MonoBehaviour
     {
         get
         {
-            if (mSteelsA == null)
-                mSteelsA = new List<GameObject>();
-            return mSteelsA;
-        }
-        set { }
-    }
-
-    public List<GameObject> SteelsB
-    {
-        get
-        {
-            if (mSteelsB == null)
-                mSteelsB = new List<GameObject>();
-            return mSteelsB;
+            if (mSteels == null)
+                mSteels = new List<GameObject>();
+            return mSteels;
         }
         set { }
     }
@@ -113,9 +101,9 @@ public class SteelManager : MonoBehaviour
             string[] _data = _line.Split(',');
             SteelBuilder _steelBuilder = new SteelBuilder();
             GameObject _steel = Instantiate(mPrefabSteel, StockLayout.GetInstance().getExactSteelLocation(_data[mIndexPileNo]), Quaternion.identity);
-            _steel.name = _data[mIndexMarkNo];
+            _steel.name = string.Format("{0}_{1}", _data[mIndexMarkNo], _type.ToString());
             _steel.GetComponent<Steel>().Initialize(_steelBuilder.setPileNo(_data[mIndexPileNo]).setPileSequence(_data[mIndexPileSeq]).setMarkNo(_data[mIndexMarkNo]).setUnitW(_data[mIndexUnitW]).setToPile(_data[mIndexToPile]).Build());
-            StockLayout.GetInstance().PutDown(_data[mIndexPileNo], _data[mIndexMarkNo], _type);
+            StockLayout.GetInstance().PutDown(_data[mIndexPileNo], _steel.name, _type);
             _steel.transform.parent = mParentSteel.transform;
             Steels.Add(_steel);
         }
